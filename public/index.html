@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>teddy_notes</title>
+
+	<!-- update the version number as needed -->
+	<script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
+	<script defer src="/__/firebase/7.14.5/firebase-firestore.js"></script>
+	<script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
+	<!-- initialize the SDK after all desired features are loaded -->
+	<script defer src="/__/firebase/init.js"></script>
+
+
+	<script defer src="app.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-dark navbar-dark bg-dark ">
+			<a class="navbar-brand" href="/">teddy_notes</a>
+			<div class="form-inline my-2 my-lg-0">
+				<span class="text-muted" id="display-name"></span>
+				<button class="btn btn-dark" onclick="login()" id="login">Sign in with Google</button>
+			</div>
+		</nav>
+	</div>
+
+</body>
+
+</html>
