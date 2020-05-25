@@ -19,13 +19,14 @@ function showCards() {
     db.collection("notes")
         .onSnapshot(docs => {
             document.getElementById("notes").innerHTML = '';
-            docs.forEach(function (doc) {
+            docs.forEach(doc => {
                 document.getElementById("notes").innerHTML +=
                     `
-                <div class="card " style="width: 18rem;">
+                <div class="card "style="width: 18rem;" id="${doc.lE.key.path.segments[6]}">
                     <div class="card-body">
                         <h5 class="card-title">${doc.data().title}</h5>
                         <p class="card-text">${doc.data().desc}</p>
+                        <input type="button" value="Delete" onclick="removeNote(this.parentElement.parentElement.id)">
                     </div>
 			    </div>
                     `
@@ -53,10 +54,21 @@ function addNote() {
         desc: `${document.getElementById("input-desc").value }`,
         show: true
     })
-    .then(function() {
+    .then(() => {
         console.log("Document successfully written!");
     })
-    .catch(function(error) {
+    .catch(error =>  {
         console.error("Error writing document: ", error);
+    });
+}
+
+function removeNote(id) {
+    db = firebase.firestore();
+    db.collection("notes").doc(id).delete()
+    .then(() => {
+        console.log("Document successfully removed!");
+    })
+    .catch(error => {
+        console.error("Error removing document: ", error);
     });
 }
