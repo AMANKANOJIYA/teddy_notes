@@ -1,3 +1,11 @@
 .card {
     margin: 10px;
 }
+
+#input-title , #desc-title {
+    margin:10px 0;
+}
+
+#button-submit {
+    margin:10px;
+}
