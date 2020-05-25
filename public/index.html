@@ -21,11 +21,12 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
 
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<nav class="navbar navbar-expand-dark navbar-dark bg-dark ">
 			<a class="navbar-brand" href="/">teddy_notes</a>
 			<div class="form-inline my-2 my-lg-0">
@@ -33,6 +34,9 @@
 				<button class="btn btn-dark" onclick="login()" id="login">Sign in with Google</button>
 			</div>
 		</nav>
+
+		<div id="notes" class="row row-cols-4 justify-content-center">
+		</div>
 	</div>
 
 </body>
